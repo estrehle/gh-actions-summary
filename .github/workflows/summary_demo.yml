@@ -1,0 +1,22 @@
+name: 'summary_demo'
+on:
+  workflow_dispatch:
+jobs:
+  generate_outputs:
+    name: Run jobs that generate some output
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        job_names: [
+          "job_1",
+          "job_2",
+          "job_3"
+        ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Generate output
+        run: |
+          content=$(cat ./resources/lorem_ipsum.txt)
+          echo $content
