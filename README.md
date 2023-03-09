@@ -1,6 +1,6 @@
 # GitHub Actions Summary
 
-Sometimes you want to see the output from a lot of GitHub Actions jobs, for example when running tests or applying infrastructure changes.
+Sometimes you want to see the output from a lot of GitHub Actions jobs, for example to review test results or planned infrastructure updates.
 It is tedious to go through each job's output separately.
 With the GitHub Actions _job summary_ it is possible to see all job outputs in one place.
 
