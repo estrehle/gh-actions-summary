@@ -3,20 +3,18 @@ on:
   workflow_dispatch:
 jobs:
   generate_outputs:
-    name: Run jobs that generate some output
+    name: Generate outputs
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        job_names: [
-          "job_1",
-          "job_2",
-          "job_3"
-        ]
+        job: ['job_1', 'job_2', 'job_3']
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Generate output
         run: |
+          echo ${{ matrix.job }}
           content=$(cat ./resources/lorem_ipsum.txt)
-          echo $content
+          echo ${{ content }}
+          echo -------------------------------------
