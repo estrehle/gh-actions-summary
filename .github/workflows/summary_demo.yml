@@ -15,6 +15,6 @@ jobs:
       - name: Generate output
         run: |
           echo "# ${{ matrix.job }}" >> $GITHUB_STEP_SUMMARY
-          content=$(cat ./resources/lorem_ipsum.txt)
-          { echo "'''bash" ; echo "'''" } >> $GITHUB_STEP_SUMMARY
-          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "'''bash" >> $GITHUB_STEP_SUMMARY
+          echo "hello" >> $GITHUB_STEP_SUMMARY
+          echo "'''" >> $GITHUB_STEP_SUMMARY
