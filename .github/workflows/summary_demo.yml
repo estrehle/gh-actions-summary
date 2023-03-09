@@ -16,5 +16,5 @@ jobs:
         run: |
           echo ${{ matrix.job }}
           content=$(cat ./resources/lorem_ipsum.txt)
-          echo ${{ content }}
+          echo $content
           echo -------------------------------------
